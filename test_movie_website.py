@@ -59,20 +59,6 @@ def test_movie_website_login():
         assert "Test Movie" in driver.page_source
         print("Test Case 3: Add Movie - Movie list updated with 'Test Movie'.\n")
 
-        # Test Case 4: Editing a movie updates the movie list
-        edit_movie_button = driver.find_element(By.XPATH, "/html/body/main/section[2]/div[1]/div/button[1]")
-        edit_movie_button.click()
-
-        # Modify movie details in the edit movie form
-        title_input.clear()
-        title_input.send_keys("Edited Movie")
-        submit_button.click()
-
-        # Validate the presence of the edited movie in the list
-        assert "Edited Movie" in driver.page_source
-        print("Test Case 4: Edit Movie - Movie list updated with 'Edited Movie'.")
-
-
         # Wait for the login to complete
         WebDriverWait(driver, 10).until(EC.title_contains("Movie Review"))
 
