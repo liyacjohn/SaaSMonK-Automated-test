@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-def test_movie_website_login():
+def test_movie_website():
     # Start the WebDriver (Chrome in this example)
     driver = webdriver.Chrome()
 
@@ -71,4 +71,4 @@ def test_movie_website_login():
 
 # Run the test
 if __name__ == "__main__":
-    test_movie_website_login()
+    test_movie_website()
